@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Frame01</title>
+</head>
+<body>
+
+<div class="w3-content w3-section">
+  <p align = "center"><a href="mainNews01.html">
+  	<img class="mainSlide" src="mainNews01.jpg"  style="height: 500px; width: 90%;">
+  </a>
+  <a href="mainNews02.html">
+  	<img class="mainSlide" src="mainNews02.jpg" style="height: 500px; width: 90%;">
+  </a>
+  <a href="mainNews03.html">
+  	<img class="mainSlide" src="mainNews03.jpg" style="height: 500px; width: 90%;">
+  </a></p>
+  
+  
+</div>
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mainSlide");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 1500); // Change image every 2 seconds
+}
+</script>
+	 
+
+</body>
+</html>
